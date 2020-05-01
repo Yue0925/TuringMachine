@@ -1,0 +1,15 @@
+digraph TuringMachine {
+	rankdir=LR;
+	node [shape = circle, label="Even", fontsize=12] Even;
+	node [shape = circle, label="Odd", fontsize=12] Odd;
+	node [shape = doublecircle, label="YES", fontsize=12] YES;
+	node [shape = doublecircle, label="NO", fontsize=12] NO;
+	node [shape = point ]; start
+	start -> Even;
+	Even -> Odd [ label = "0/0/R" ];
+	Odd -> Even [ label = "0/0/R" ];
+	Even -> Even [ label = "1/1/R" ];
+	Odd -> Odd [ label = "1/1/R" ];
+	Even -> YES [ label = "B/B/R" ];
+	Odd -> NO [ label = "B/B/R" ];
+}

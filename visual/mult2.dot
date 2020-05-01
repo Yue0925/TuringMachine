@@ -1,0 +1,10 @@
+digraph TuringMachine {
+	rankdir=LR;
+	node [shape = circle, label="In Progress", fontsize=12] InProgress;
+	node [shape = doublecircle, label="Done", fontsize=12] Done;
+	node [shape = point ]; start
+	start -> InProgress;
+	InProgress -> InProgress [ label = "0/0/R" ];
+	InProgress -> InProgress [ label = "1/1/R" ];
+	InProgress -> Done [ label = "B/0/R" ];
+}

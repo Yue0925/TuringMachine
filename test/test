@@ -1,0 +1,4 @@
+ -help
+ -state -steps -tape ./test/mult2.tm 001100
+ -state -steps -tape ./test/even_number_of_zeros.tm 001100
+ 

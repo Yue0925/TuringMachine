@@ -1,0 +1,30 @@
+#################################
+./bin/myTuring -help
+Usage: myTuring[OPTION]... [FILE]...[INPUT]...
+  -a, --state or -state    the program will print the final state of the machine.
+  -s, --steps or -steps    the program will print all the steps of the machine execution.
+  -h, --help  or -help     print this help.
+  -t, --tape  or -tape     the program will print the content of the tape at the end of the execution.
+After command options, the program needs a description file *.tm and a input word.
+#################################
+./bin/myTuring -state -steps -tape ./test/mult2.tm 001100
+(In Progress, 0) -> (In Progress, 0, RIGHT)
+(In Progress, 0) -> (In Progress, 0, RIGHT)
+(In Progress, 1) -> (In Progress, 1, RIGHT)
+(In Progress, 1) -> (In Progress, 1, RIGHT)
+(In Progress, 0) -> (In Progress, 0, RIGHT)
+(In Progress, 0) -> (In Progress, 0, RIGHT)
+(In Progress, B) -> (Done, 0, RIGHT)
+Final State: Done
+Final tape: 0011000
+#################################
+./bin/myTuring -state -steps -tape ./test/even_number_of_zeros.tm 001100
+(Even, 0) -> (Odd, 0, RIGHT)
+(Odd, 0) -> (Even, 0, RIGHT)
+(Even, 1) -> (Even, 1, RIGHT)
+(Even, 1) -> (Even, 1, RIGHT)
+(Even, 0) -> (Odd, 0, RIGHT)
+(Odd, 0) -> (Even, 0, RIGHT)
+(Even, B) -> (YES, B, RIGHT)
+Final State: YES
+Final tape: 001100
